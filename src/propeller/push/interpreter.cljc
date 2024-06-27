@@ -48,6 +48,8 @@
             (> (:step state) step-limit))
       (if (:keep-history state)
         (assoc state :history history)
-        state)
+        (do
+          (print (str (count (state/peek-stack-many state :integer 1000)) ", "))
+          state))
       (recur (update (interpret-one-step state) :step inc)
              (when (:keep-history state) (conj history state))))))

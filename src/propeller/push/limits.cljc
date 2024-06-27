@@ -15,7 +15,7 @@
   "Limits the number of items that can be duplicated onto a stack at once.
 We might want to extend this to limit all the different that things may
 be placed on a stack."
-  100)
+  500)
 
 ;; =============================================================================
 ;; Values used by the Push instructions to keep computed values within
